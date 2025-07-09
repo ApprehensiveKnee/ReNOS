@@ -1,0 +1,324 @@
+{
+    "arch": {
+        "topology": "mesh",
+        "k": 5,
+        "n": 2,
+        "use_read_write": 1,
+        "routing_function": "dim_order",
+        "num_vcs": 16,
+        "user_defined_traffic": 1,
+        "watch_out": "-",
+        "reconfiguration": 0,
+        "reconf_batch_size": 0,
+        "reconf_cycles": 0.08,
+        "ANY_comp_cycles": 0.01,
+        "max_pe_mem": 45000,
+        "threshold_pe_mem": 25000
+    },
+    "workload": [
+        {
+            "id": 10,
+            "size": 784,
+            "dep": [
+                -1
+            ],
+            "type": "WRITE",
+            "cl": 0,
+            "pt_required": 235,
+            "src": 0,
+            "dst": 3
+        },
+        {
+            "id": 0,
+            "type": "COMP_OP",
+            "layer_id": 1,
+            "size": 10401,
+            "weight_size": 401,
+            "input_range": {
+                "spatial_min": [
+                    0,
+                    0
+                ],
+                "spatial_max": [
+                    28,
+                    28
+                ],
+                "ch_bounds": [
+                    0,
+                    1
+                ]
+            },
+            "output_range": {
+                "spatial_min": [
+                    0,
+                    0
+                ],
+                "spatial_max": [
+                    24,
+                    24
+                ],
+                "ch_bounds": [
+                    0,
+                    16
+                ]
+            },
+            "ct_required": 470016,
+            "dep": [
+                10
+            ],
+            "node": 3
+        },
+        {
+            "id": 11,
+            "size": 9216,
+            "dep": [
+                0
+            ],
+            "type": "WRITE_REQ",
+            "cl": 0,
+            "pt_required": 2764,
+            "src": 3,
+            "dst": 3
+        },
+        {
+            "id": 1,
+            "type": "COMP_OP",
+            "layer_id": 2,
+            "size": 11520,
+            "weight_size": 0,
+            "input_range": {
+                "spatial_min": [
+                    0,
+                    0
+                ],
+                "spatial_max": [
+                    24,
+                    24
+                ],
+                "ch_bounds": [
+                    0,
+                    16
+                ]
+            },
+            "output_range": {
+                "spatial_min": [
+                    0,
+                    0
+                ],
+                "spatial_max": [
+                    12,
+                    12
+                ],
+                "ch_bounds": [
+                    0,
+                    16
+                ]
+            },
+            "ct_required": 6912,
+            "dep": [
+                11
+            ],
+            "node": 3
+        },
+        {
+            "id": 12,
+            "size": 2304,
+            "dep": [
+                1
+            ],
+            "type": "WRITE_REQ",
+            "cl": 0,
+            "pt_required": 691,
+            "src": 3,
+            "dst": 3
+        },
+        {
+            "id": 2,
+            "type": "COMP_OP",
+            "layer_id": 3,
+            "size": 17168,
+            "weight_size": 12816,
+            "input_range": {
+                "spatial_min": [
+                    0,
+                    0
+                ],
+                "spatial_max": [
+                    12,
+                    12
+                ],
+                "ch_bounds": [
+                    0,
+                    16
+                ]
+            },
+            "output_range": {
+                "spatial_min": [
+                    0,
+                    0
+                ],
+                "spatial_max": [
+                    8,
+                    8
+                ],
+                "ch_bounds": [
+                    0,
+                    32
+                ]
+            },
+            "ct_required": 1640448,
+            "dep": [
+                12
+            ],
+            "node": 3
+        },
+        {
+            "id": 13,
+            "size": 2048,
+            "dep": [
+                2
+            ],
+            "type": "WRITE_REQ",
+            "cl": 0,
+            "pt_required": 614,
+            "src": 3,
+            "dst": 1
+        },
+        {
+            "id": 3,
+            "type": "COMP_OP",
+            "layer_id": 4,
+            "size": 2560,
+            "weight_size": 0,
+            "input_range": {
+                "spatial_min": [
+                    0,
+                    0
+                ],
+                "spatial_max": [
+                    8,
+                    8
+                ],
+                "ch_bounds": [
+                    0,
+                    32
+                ]
+            },
+            "output_range": {
+                "spatial_min": [
+                    0,
+                    0
+                ],
+                "spatial_max": [
+                    4,
+                    4
+                ],
+                "ch_bounds": [
+                    0,
+                    32
+                ]
+            },
+            "ct_required": 1536,
+            "dep": [
+                13
+            ],
+            "node": 1
+        },
+        {
+            "id": 14,
+            "size": 512,
+            "dep": [
+                3
+            ],
+            "type": "WRITE_REQ",
+            "cl": 0,
+            "pt_required": 153,
+            "src": 1,
+            "dst": 0
+        },
+        {
+            "id": 4,
+            "type": "COMP_OP",
+            "layer_id": 5,
+            "size": 66304,
+            "weight_size": 65664,
+            "input_range": {
+                "spatial_min": [
+                    0
+                ],
+                "spatial_max": [
+                    512
+                ],
+                "ch_bounds": []
+            },
+            "output_range": {
+                "spatial_min": [
+                    0
+                ],
+                "spatial_max": [
+                    128
+                ],
+                "ch_bounds": []
+            },
+            "ct_required": 131072,
+            "dep": [
+                14
+            ],
+            "node": 0
+        },
+        {
+            "id": 15,
+            "size": 128,
+            "dep": [
+                4
+            ],
+            "type": "WRITE_REQ",
+            "cl": 0,
+            "pt_required": 38,
+            "src": 0,
+            "dst": 1
+        },
+        {
+            "id": 5,
+            "type": "COMP_OP",
+            "layer_id": 6,
+            "size": 1428,
+            "weight_size": 1290,
+            "input_range": {
+                "spatial_min": [
+                    0
+                ],
+                "spatial_max": [
+                    128
+                ],
+                "ch_bounds": []
+            },
+            "output_range": {
+                "spatial_min": [
+                    0
+                ],
+                "spatial_max": [
+                    10
+                ],
+                "ch_bounds": []
+            },
+            "ct_required": 2591,
+            "dep": [
+                15
+            ],
+            "node": 1
+        },
+        {
+            "id": 16,
+            "size": 1,
+            "dep": [
+                5
+            ],
+            "type": "WRITE",
+            "cl": 0,
+            "pt_required": 38,
+            "src": 1,
+            "dst": 20
+        }
+    ]
+}

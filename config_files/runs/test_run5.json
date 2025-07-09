@@ -1,0 +1,187 @@
+
+{
+
+    "arch":{
+            "topology" : "torus",
+            "k" : 3,
+            "n" : 2,
+            "use_read_write" : 1,
+            "routing_function" : "dim_order",
+            "num_vcs" : 16,
+            "user_defined_traffic" : 1,
+            "watch_out" : "-",
+            "logger": 1,
+            "reconfiguration": 1,
+            "reconf_cycles": 2,
+            "max_pe_mem": 15
+        },
+
+    "workload":[
+
+        {
+            "id" : 0,
+            "src" : 0,
+            "dst" : 0,
+            "size" : 8,
+            "dep" : [-1],
+            "type" : "WRITE",
+            "cl" : 0,
+            "pt_required" : 8
+        },
+        {
+            "id" : 1,
+            "src" : 0,
+            "dst" : 1,
+            "size" : 6,
+            "dep" : [-1],
+            "type" : "WRITE",
+            "cl" : 0,
+            "pt_required" : 6
+        }, 
+        {
+            "id" : 2,
+            "src" : 0,
+            "dst" : 2,
+            "size" : 4,
+            "dep" : [-1],
+            "type" : "WRITE",
+            "cl" : 0,
+            "pt_required" : 4
+        },
+        {
+            "id" : 3,
+            "node" : 0,
+            "size" : 4,
+            "weight_size" : 2,
+            "type" : "COMP_OP",
+            "ct_required" : 40,
+            "dep" : [0]
+        },
+        {
+            "id" : 4,
+            "node" : 1,
+            "size" : 5,
+            "weight_size" : 2,
+            "type" : "COMP_OP",
+            "ct_required" : 30,
+            "dep" : [1]
+        },
+        {
+            "id" : 5,
+            "node" : 2,
+            "size" : 6,
+            "weight_size" : 2,
+            "type" : "COMP_OP",
+            "ct_required" : 20,
+            "dep" : [2]
+        },
+        {
+            "id" : 6,
+            "src" : 0,
+            "dst" : 3,
+            "size" : 4,
+            "dep" : [3],
+            "type" : "WRITE_REQ",
+            "cl" : 0,
+            "pt_required" : 4
+        },
+        {
+            "id" : 7,
+            "src" : 1,
+            "dst" : 3,
+            "size" : 1,
+            "dep" : [4],
+            "type" : "WRITE_REQ",
+            "cl" : 0,
+            "pt_required" : 1
+        },
+        {
+            "id" : 8,
+            "src" : 1,
+            "dst" : 4,
+            "size" : 2,
+            "dep" : [4],
+            "type" : "WRITE_REQ",
+            "cl" : 0,
+            "pt_required" : 2
+        },
+        {
+            "id" : 9,
+            "src" : 2,
+            "dst" : 3,
+            "size" : 1,
+            "dep" : [5],
+            "type" : "WRITE_REQ",
+            "cl" : 0,
+            "pt_required" : 1
+        },
+        {
+            "id" : 10,
+            "src" : 2,
+            "dst" : 4,
+            "size" : 1,
+            "dep" : [5],
+            "type" : "WRITE_REQ",
+            "cl" : 0,
+            "pt_required" : 1
+        },
+        {
+            "id" : 11,
+            "node" : 3,
+            "size" : 3,
+            "weight_size" : 2,
+            "type" : "COMP_OP",
+            "ct_required" : 10,
+            "dep" : [6,7,9]
+        },
+        {
+            "id" : 12,
+            "node" : 4,
+            "size" : 3,
+            "weight_size" : 2,
+            "type" : "COMP_OP",
+            "ct_required" : 10,
+            "dep" : [8,10]
+        },
+        {
+            "id" : 13,
+            "src" : 3,
+            "dst" : 7,
+            "size" : 1,
+            "dep" : [11],
+            "type" : "WRITE_REQ",
+            "cl" : 0,
+            "pt_required" : 1
+        },
+        {
+            "id" : 14,
+            "src" : 4,
+            "dst" : 7,
+            "size" : 1,
+            "dep" : [12],
+            "type" : "WRITE_REQ",
+            "cl" : 0,
+            "pt_required" : 1
+        },
+        {
+            "id" : 15,
+            "node" : 7,
+            "size" : 2,
+            "weight_size" : 1,
+            "type" : "COMP_OP",
+            "ct_required" : 10,
+            "dep" : [13,14]
+        },
+        {
+            "id" : 16,
+            "src" : 7,
+            "dst" : 8,
+            "size" : 1,
+            "dep" : [15],
+            "type" : "WRITE",
+            "cl" : 0,
+            "pt_required" : 1
+        }
+    ]
+
+}

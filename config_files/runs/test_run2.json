@@ -1,0 +1,33 @@
+
+{
+
+    "arch":{
+            "topology" : "torus",
+            "k" : 3,
+            "n" : 2,
+            "use_read_write" : 1,
+            "routing_function" : "dim_order",
+            "num_vcs" : 16,
+            "internal_speedup" : 1.5,
+            "user_defined_traffic" : 1,
+            "watch_out" : "-",
+            "logger": 1,
+            "reconfiguration": 0,
+            "reconf_cycles": 0.1,
+            "max_pe_mem": 15
+        },
+        
+    "workload" : [
+
+        {
+            "id" : 0,
+            "src" : 0,
+            "dst" : 1,
+            "size" : 1,
+            "dep" : [-1],
+            "type" : "WRITE",
+            "cl" : 0,
+            "pt_required" : 0
+        }
+    ]
+}

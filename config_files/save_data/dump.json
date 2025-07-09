@@ -1,0 +1,876 @@
+{
+    "arch": {
+        "topology": "torus",
+        "k": 8,
+        "n": 2,
+        "use_read_write": 1,
+        "routing_function": "dim_order",
+        "num_vcs": 16,
+        "user_defined_traffic": 1,
+        "watch_out": "-"
+    },
+    "workload": [
+        {
+            "id": 100,
+            "size": 2,
+            "dep": [
+                -1
+            ],
+            "type": "WRITE",
+            "cl": 0,
+            "pt_required": 1,
+            "src": 0,
+            "dst": 7
+        },
+        {
+            "id": 0,
+            "type": "COMP_OP",
+            "layer_id": 1,
+            "size": 422,
+            "ct_required": 457,
+            "dep": [
+                100
+            ],
+            "node": 7
+        },
+        {
+            "id": 101,
+            "size": 2,
+            "dep": [
+                -1
+            ],
+            "type": "WRITE",
+            "cl": 0,
+            "pt_required": 1,
+            "src": 0,
+            "dst": 13
+        },
+        {
+            "id": 1,
+            "type": "COMP_OP",
+            "layer_id": 1,
+            "size": 422,
+            "ct_required": 457,
+            "dep": [
+                101
+            ],
+            "node": 13
+        },
+        {
+            "id": 102,
+            "size": 2,
+            "dep": [
+                -1
+            ],
+            "type": "WRITE",
+            "cl": 0,
+            "pt_required": 1,
+            "src": 0,
+            "dst": 63
+        },
+        {
+            "id": 2,
+            "type": "COMP_OP",
+            "layer_id": 1,
+            "size": 422,
+            "ct_required": 457,
+            "dep": [
+                102
+            ],
+            "node": 63
+        },
+        {
+            "id": 103,
+            "size": 2,
+            "dep": [
+                -1
+            ],
+            "type": "WRITE",
+            "cl": 0,
+            "pt_required": 1,
+            "src": 0,
+            "dst": 1
+        },
+        {
+            "id": 3,
+            "type": "COMP_OP",
+            "layer_id": 1,
+            "size": 422,
+            "ct_required": 457,
+            "dep": [
+                103
+            ],
+            "node": 1
+        },
+        {
+            "id": 104,
+            "size": 5,
+            "dep": [
+                0
+            ],
+            "type": "WRITE_REQ",
+            "cl": 0,
+            "pt_required": 2,
+            "src": 7,
+            "dst": 7
+        },
+        {
+            "id": 4,
+            "type": "COMP_OP",
+            "layer_id": 2,
+            "size": 218,
+            "ct_required": 1,
+            "dep": [
+                104
+            ],
+            "node": 7
+        },
+        {
+            "id": 105,
+            "size": 5,
+            "dep": [
+                1
+            ],
+            "type": "WRITE_REQ",
+            "cl": 0,
+            "pt_required": 2,
+            "src": 13,
+            "dst": 13
+        },
+        {
+            "id": 5,
+            "type": "COMP_OP",
+            "layer_id": 2,
+            "size": 211,
+            "ct_required": 1,
+            "dep": [
+                105
+            ],
+            "node": 13
+        },
+        {
+            "id": 106,
+            "size": 5,
+            "dep": [
+                2
+            ],
+            "type": "WRITE_REQ",
+            "cl": 0,
+            "pt_required": 2,
+            "src": 63,
+            "dst": 63
+        },
+        {
+            "id": 6,
+            "type": "COMP_OP",
+            "layer_id": 2,
+            "size": 211,
+            "ct_required": 1,
+            "dep": [
+                106
+            ],
+            "node": 63
+        },
+        {
+            "id": 107,
+            "size": 5,
+            "dep": [
+                3
+            ],
+            "type": "WRITE_REQ",
+            "cl": 0,
+            "pt_required": 2,
+            "src": 1,
+            "dst": 1
+        },
+        {
+            "id": 7,
+            "type": "COMP_OP",
+            "layer_id": 2,
+            "size": 205,
+            "ct_required": 1,
+            "dep": [
+                107
+            ],
+            "node": 1
+        },
+        {
+            "id": 108,
+            "size": 1,
+            "dep": [
+                4
+            ],
+            "type": "WRITE_REQ",
+            "cl": 0,
+            "pt_required": 0,
+            "src": 7,
+            "dst": 5
+        },
+        {
+            "id": 109,
+            "size": 1,
+            "dep": [
+                4
+            ],
+            "type": "WRITE_REQ",
+            "cl": 0,
+            "pt_required": 0,
+            "src": 7,
+            "dst": 6
+        },
+        {
+            "id": 110,
+            "size": 1,
+            "dep": [
+                4
+            ],
+            "type": "WRITE_REQ",
+            "cl": 0,
+            "pt_required": 0,
+            "src": 7,
+            "dst": 12
+        },
+        {
+            "id": 111,
+            "size": 1,
+            "dep": [
+                4
+            ],
+            "type": "WRITE_REQ",
+            "cl": 0,
+            "pt_required": 0,
+            "src": 7,
+            "dst": 14
+        },
+        {
+            "id": 112,
+            "size": 1,
+            "dep": [
+                5
+            ],
+            "type": "WRITE_REQ",
+            "cl": 0,
+            "pt_required": 0,
+            "src": 13,
+            "dst": 5
+        },
+        {
+            "id": 113,
+            "size": 1,
+            "dep": [
+                5
+            ],
+            "type": "WRITE_REQ",
+            "cl": 0,
+            "pt_required": 0,
+            "src": 13,
+            "dst": 6
+        },
+        {
+            "id": 114,
+            "size": 1,
+            "dep": [
+                5
+            ],
+            "type": "WRITE_REQ",
+            "cl": 0,
+            "pt_required": 0,
+            "src": 13,
+            "dst": 12
+        },
+        {
+            "id": 115,
+            "size": 1,
+            "dep": [
+                5
+            ],
+            "type": "WRITE_REQ",
+            "cl": 0,
+            "pt_required": 0,
+            "src": 13,
+            "dst": 14
+        },
+        {
+            "id": 116,
+            "size": 1,
+            "dep": [
+                6
+            ],
+            "type": "WRITE_REQ",
+            "cl": 0,
+            "pt_required": 0,
+            "src": 63,
+            "dst": 5
+        },
+        {
+            "id": 117,
+            "size": 1,
+            "dep": [
+                6
+            ],
+            "type": "WRITE_REQ",
+            "cl": 0,
+            "pt_required": 0,
+            "src": 63,
+            "dst": 6
+        },
+        {
+            "id": 118,
+            "size": 1,
+            "dep": [
+                6
+            ],
+            "type": "WRITE_REQ",
+            "cl": 0,
+            "pt_required": 0,
+            "src": 63,
+            "dst": 12
+        },
+        {
+            "id": 119,
+            "size": 1,
+            "dep": [
+                6
+            ],
+            "type": "WRITE_REQ",
+            "cl": 0,
+            "pt_required": 0,
+            "src": 63,
+            "dst": 14
+        },
+        {
+            "id": 120,
+            "size": 1,
+            "dep": [
+                7
+            ],
+            "type": "WRITE_REQ",
+            "cl": 0,
+            "pt_required": 0,
+            "src": 1,
+            "dst": 5
+        },
+        {
+            "id": 8,
+            "type": "COMP_OP",
+            "layer_id": 3,
+            "size": 265,
+            "ct_required": 52,
+            "dep": [
+                108,
+                112,
+                116,
+                120
+            ],
+            "node": 5
+        },
+        {
+            "id": 121,
+            "size": 1,
+            "dep": [
+                7
+            ],
+            "type": "WRITE_REQ",
+            "cl": 0,
+            "pt_required": 0,
+            "src": 1,
+            "dst": 6
+        },
+        {
+            "id": 9,
+            "type": "COMP_OP",
+            "layer_id": 3,
+            "size": 251,
+            "ct_required": 43,
+            "dep": [
+                109,
+                113,
+                117,
+                121
+            ],
+            "node": 6
+        },
+        {
+            "id": 122,
+            "size": 1,
+            "dep": [
+                7
+            ],
+            "type": "WRITE_REQ",
+            "cl": 0,
+            "pt_required": 0,
+            "src": 1,
+            "dst": 12
+        },
+        {
+            "id": 10,
+            "type": "COMP_OP",
+            "layer_id": 3,
+            "size": 251,
+            "ct_required": 38,
+            "dep": [
+                110,
+                114,
+                118,
+                122
+            ],
+            "node": 12
+        },
+        {
+            "id": 123,
+            "size": 1,
+            "dep": [
+                7
+            ],
+            "type": "WRITE_REQ",
+            "cl": 0,
+            "pt_required": 0,
+            "src": 1,
+            "dst": 14
+        },
+        {
+            "id": 11,
+            "type": "COMP_OP",
+            "layer_id": 3,
+            "size": 239,
+            "ct_required": 31,
+            "dep": [
+                111,
+                115,
+                119,
+                123
+            ],
+            "node": 14
+        },
+        {
+            "id": 124,
+            "size": 2,
+            "dep": [
+                8
+            ],
+            "type": "WRITE_REQ",
+            "cl": 0,
+            "pt_required": 1,
+            "src": 5,
+            "dst": 13
+        },
+        {
+            "id": 125,
+            "size": 2,
+            "dep": [
+                8
+            ],
+            "type": "WRITE_REQ",
+            "cl": 0,
+            "pt_required": 1,
+            "src": 5,
+            "dst": 14
+        },
+        {
+            "id": 126,
+            "size": 1,
+            "dep": [
+                9
+            ],
+            "type": "WRITE_REQ",
+            "cl": 0,
+            "pt_required": 0,
+            "src": 6,
+            "dst": 13
+        },
+        {
+            "id": 127,
+            "size": 1,
+            "dep": [
+                9
+            ],
+            "type": "WRITE_REQ",
+            "cl": 0,
+            "pt_required": 0,
+            "src": 6,
+            "dst": 14
+        },
+        {
+            "id": 128,
+            "size": 1,
+            "dep": [
+                10
+            ],
+            "type": "WRITE_REQ",
+            "cl": 0,
+            "pt_required": 0,
+            "src": 12,
+            "dst": 13
+        },
+        {
+            "id": 129,
+            "size": 1,
+            "dep": [
+                10
+            ],
+            "type": "WRITE_REQ",
+            "cl": 0,
+            "pt_required": 0,
+            "src": 12,
+            "dst": 14
+        },
+        {
+            "id": 130,
+            "size": 1,
+            "dep": [
+                11
+            ],
+            "type": "WRITE_REQ",
+            "cl": 0,
+            "pt_required": 0,
+            "src": 14,
+            "dst": 13
+        },
+        {
+            "id": 12,
+            "type": "COMP_OP",
+            "layer_id": 4,
+            "size": 266,
+            "ct_required": 5,
+            "dep": [
+                124,
+                126,
+                128,
+                130
+            ],
+            "node": 13
+        },
+        {
+            "id": 131,
+            "size": 1,
+            "dep": [
+                11
+            ],
+            "type": "WRITE_REQ",
+            "cl": 0,
+            "pt_required": 0,
+            "src": 14,
+            "dst": 14
+        },
+        {
+            "id": 13,
+            "type": "COMP_OP",
+            "layer_id": 4,
+            "size": 266,
+            "ct_required": 5,
+            "dep": [
+                125,
+                127,
+                129,
+                131
+            ],
+            "node": 14
+        },
+        {
+            "id": 132,
+            "size": 3,
+            "dep": [
+                12
+            ],
+            "type": "WRITE_REQ",
+            "cl": 0,
+            "pt_required": 1,
+            "src": 13,
+            "dst": 14
+        },
+        {
+            "id": 133,
+            "size": 1,
+            "dep": [
+                13
+            ],
+            "type": "WRITE_REQ",
+            "cl": 0,
+            "pt_required": 0,
+            "src": 14,
+            "dst": 14
+        },
+        {
+            "id": 14,
+            "type": "COMP_OP",
+            "layer_id": 5,
+            "size": 242,
+            "ct_required": 2,
+            "dep": [
+                132,
+                133
+            ],
+            "node": 14
+        },
+        {
+            "id": 134,
+            "size": 7,
+            "dep": [
+                14
+            ],
+            "type": "WRITE_REQ",
+            "cl": 0,
+            "pt_required": 3,
+            "src": 14,
+            "dst": 6
+        },
+        {
+            "id": 15,
+            "type": "COMP_OP",
+            "layer_id": 6,
+            "size": 146,
+            "ct_required": 1,
+            "dep": [
+                134
+            ],
+            "node": 6
+        },
+        {
+            "id": 135,
+            "size": 1,
+            "dep": [
+                15
+            ],
+            "type": "WRITE_REQ",
+            "cl": 0,
+            "pt_required": 0,
+            "src": 6,
+            "dst": 15
+        },
+        {
+            "id": 16,
+            "type": "COMP_OP",
+            "layer_id": 7,
+            "size": 9846,
+            "ct_required": 96,
+            "dep": [
+                135
+            ],
+            "node": 15
+        },
+        {
+            "id": 136,
+            "size": 1,
+            "dep": [
+                15
+            ],
+            "type": "WRITE_REQ",
+            "cl": 0,
+            "pt_required": 0,
+            "src": 6,
+            "dst": 62
+        },
+        {
+            "id": 17,
+            "type": "COMP_OP",
+            "layer_id": 7,
+            "size": 9846,
+            "ct_required": 96,
+            "dep": [
+                136
+            ],
+            "node": 62
+        },
+        {
+            "id": 137,
+            "size": 1,
+            "dep": [
+                16
+            ],
+            "type": "WRITE_REQ",
+            "cl": 0,
+            "pt_required": 0,
+            "src": 15,
+            "dst": 7
+        },
+        {
+            "id": 138,
+            "size": 1,
+            "dep": [
+                17
+            ],
+            "type": "WRITE_REQ",
+            "cl": 0,
+            "pt_required": 0,
+            "src": 62,
+            "dst": 7
+        },
+        {
+            "id": 18,
+            "type": "COMP_OP",
+            "layer_id": 8,
+            "size": 384,
+            "ct_required": 3,
+            "dep": [
+                137,
+                138
+            ],
+            "node": 7
+        },
+        {
+            "id": 139,
+            "size": 1,
+            "dep": [
+                18
+            ],
+            "type": "WRITE_REQ",
+            "cl": 0,
+            "pt_required": 0,
+            "src": 7,
+            "dst": 7
+        },
+        {
+            "id": 19,
+            "type": "COMP_OP",
+            "layer_id": 9,
+            "size": 128,
+            "ct_required": 1,
+            "dep": [
+                139
+            ],
+            "node": 7
+        },
+        {
+            "id": 140,
+            "size": 1,
+            "dep": [
+                19
+            ],
+            "type": "WRITE_REQ",
+            "cl": 0,
+            "pt_required": 0,
+            "src": 7,
+            "dst": 7
+        },
+        {
+            "id": 20,
+            "type": "COMP_OP",
+            "layer_id": 10,
+            "size": 1636,
+            "ct_required": 15,
+            "dep": [
+                140
+            ],
+            "node": 7
+        },
+        {
+            "id": 141,
+            "size": 1,
+            "dep": [
+                19
+            ],
+            "type": "WRITE_REQ",
+            "cl": 0,
+            "pt_required": 0,
+            "src": 7,
+            "dst": 7
+        },
+        {
+            "id": 21,
+            "type": "COMP_OP",
+            "layer_id": 10,
+            "size": 1636,
+            "ct_required": 15,
+            "dep": [
+                141
+            ],
+            "node": 7
+        },
+        {
+            "id": 142,
+            "size": 1,
+            "dep": [
+                20
+            ],
+            "type": "WRITE_REQ",
+            "cl": 0,
+            "pt_required": 0,
+            "src": 7,
+            "dst": 13
+        },
+        {
+            "id": 143,
+            "size": 1,
+            "dep": [
+                20
+            ],
+            "type": "WRITE_REQ",
+            "cl": 0,
+            "pt_required": 0,
+            "src": 7,
+            "dst": 14
+        },
+        {
+            "id": 144,
+            "size": 1,
+            "dep": [
+                21
+            ],
+            "type": "WRITE_REQ",
+            "cl": 0,
+            "pt_required": 0,
+            "src": 7,
+            "dst": 13
+        },
+        {
+            "id": 22,
+            "type": "COMP_OP",
+            "layer_id": 11,
+            "size": 279,
+            "ct_required": 2,
+            "dep": [
+                142,
+                144
+            ],
+            "node": 13
+        },
+        {
+            "id": 145,
+            "size": 1,
+            "dep": [
+                21
+            ],
+            "type": "WRITE_REQ",
+            "cl": 0,
+            "pt_required": 0,
+            "src": 7,
+            "dst": 14
+        },
+        {
+            "id": 23,
+            "type": "COMP_OP",
+            "layer_id": 11,
+            "size": 279,
+            "ct_required": 2,
+            "dep": [
+                143,
+                145
+            ],
+            "node": 14
+        },
+        {
+            "id": 146,
+            "size": 1,
+            "dep": [
+                22
+            ],
+            "type": "WRITE",
+            "cl": 0,
+            "pt_required": 0,
+            "src": 13,
+            "dst": 27
+        },
+        {
+            "id": 147,
+            "size": 1,
+            "dep": [
+                23
+            ],
+            "type": "WRITE",
+            "cl": 0,
+            "pt_required": 0,
+            "src": 14,
+            "dst": 27
+        }
+    ]
+}
